@@ -35,55 +35,7 @@ struct BadgeView_Previews: PreviewProvider {
   static var previews: some View {
     Group {
       BadgeView(
-        type: .bug
-      )
-      .padding()
-      .previewLayout(.sizeThatFits)
-      
-      BadgeView(
-        type: .dark
-      )
-      .padding()
-      .previewLayout(.sizeThatFits)
-      
-      BadgeView(
-        type: .dragon
-      )
-      .padding()
-      .previewLayout(.sizeThatFits)
-      
-      BadgeView(
-        type: .electric
-      )
-      .padding()
-      .previewLayout(.sizeThatFits)
-      
-      BadgeView(
-        type: .fairy
-      )
-      .padding()
-      .previewLayout(.sizeThatFits)
-      
-      BadgeView(
-        type: .fighting
-      )
-      .padding()
-      .previewLayout(.sizeThatFits)
-      
-      BadgeView(
-        type: .fire
-      )
-      .padding()
-      .previewLayout(.sizeThatFits)
-      
-      BadgeView(
-        type: .flying
-      )
-      .padding()
-      .previewLayout(.sizeThatFits)
-      
-      BadgeView(
-        type: .ghost
+        type: .water
       )
       .padding()
       .previewLayout(.sizeThatFits)

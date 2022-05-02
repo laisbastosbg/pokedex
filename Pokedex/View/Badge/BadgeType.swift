@@ -124,31 +124,31 @@ enum BadgeType {
     case .fairy:
       return Color(red: 237/255, green: 110/255, blue: 199/255)
     case .fighting:
-      return Color(red: 237/255, green: 110/255, blue: 199/255)
+      return Color(red: 208/255, green: 65/255, blue: 100/255)
     case .fire:
-      return Color(red: 237/255, green: 110/255, blue: 199/255)
+      return Color(red: 253/255, green: 125/255, blue: 36/255)
     case .flying:
-      return Color(red: 237/255, green: 110/255, blue: 199/255)
+      return Color(red: 116/255, green: 143/255, blue: 201/255)
     case .ghost:
-      return Color(red: 237/255, green: 110/255, blue: 199/255)
+      return Color(red: 85/255, green: 106/255, blue: 174/255)
     case .grass:
-      return Color(red: 237/255, green: 110/255, blue: 199/255)
+      return Color(red: 98/255, green: 185/255, blue: 87/255)
     case .ground:
-      return Color(red: 237/255, green: 110/255, blue: 199/255)
+      return Color(red: 221/255, green: 119/255, blue: 72/255)
     case .ice:
-      return Color(red: 237/255, green: 110/255, blue: 199/255)
+      return Color(red: 97/255, green: 206/255, blue: 192/255)
     case .normal:
-      return Color(red: 237/255, green: 110/255, blue: 199/255)
+      return Color(red: 157/255, green: 160/255, blue: 170/255)
     case .poison:
-      return Color(red: 237/255, green: 110/255, blue: 199/255)
+      return Color(red: 165/255, green: 82/255, blue: 204/255)
     case .psychic:
-      return Color(red: 237/255, green: 110/255, blue: 199/255)
+      return Color(red: 234/255, green: 93/255, blue: 96/255)
     case .rock:
-      return Color(red: 237/255, green: 110/255, blue: 199/255)
+      return Color(red: 186/255, green: 171/255, blue: 130/255)
     case .steel:
-      return Color(red: 237/255, green: 110/255, blue: 199/255)
+      return Color(red: 65/255, green: 125/255, blue: 154/255)
     case .water:
-      return Color(red: 237/255, green: 110/255, blue: 199/255)
+      return Color(red: 74/255, green: 144/255, blue: 218/255)
     }
   }
   

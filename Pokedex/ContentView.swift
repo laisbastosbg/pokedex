@@ -8,20 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-      VStack {
-        Text("Bug")
-            .padding()
-      
-          Text("Bug")
-              .padding()
-        PokemonView(pokemon: "medium")
+  @State var posts: [Post] = []
+  
+  var body: some View {
+    VStack {
+      List(posts) { post in
+        Text("hello")
+      }
+      .onAppear {
+        Api().getPosts { (posts) in
+          self.posts = posts
+        }
       }
     }
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+  static var previews: some View {
+    ContentView()
+      .previewInterfaceOrientation(.portrait)
+  }
 }

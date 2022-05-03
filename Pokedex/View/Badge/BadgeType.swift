@@ -1,12 +1,4 @@
-//
-//  BadgeType.swift
-//  Pokedex
-//
-//  Created by Lais Godinho on 02/05/22.
-//
-
 import SwiftUI
-
 
 enum BadgeType {
   
@@ -150,39 +142,5 @@ enum BadgeType {
     case .water:
       return Color(red: 74/255, green: 144/255, blue: 218/255)
     }
-  }
-  
-  
-}
-
-struct _BaseBadge: View {
-  
-  let type: BadgeType
-  
-  var body: some View {
-    HStack(
-      spacing: 10
-    ) {
-      Image(type.icon)
-        .resizable()
-        .renderingMode(.template)
-        .foregroundColor(.white)
-        .scaledToFit()
-        .frame(width: 15, height: 15)
-      Text(type.label)
-        .foregroundColor(.white)
-    }
-    .padding(5)
-    .background(type.color)
-    .cornerRadius(3)
-    
-  }
-}
-
-struct BadgeType_Previews: PreviewProvider {
-  static var previews: some View {
-    _BaseBadge(type: .dark)
-      .padding()
-      .previewLayout(.sizeThatFits)
   }
 }

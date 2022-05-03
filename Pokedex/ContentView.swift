@@ -8,16 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
-  @State var posts: [Post] = []
+  @State var pokemons: [Pokemon] = []
+  @State var allPokemons: [Pokemons] = []
+  @State var results: [Result] = []
   
   var body: some View {
     VStack {
-      List(posts) { post in
-        Text("hello")
+      List(pokemons) { pokemon in
+        Text(pokemon.name)
+        let string = pokemon.sprites.other.official_artwork.front_default
+        AsyncImage(url: URL(string: string)) { image in
+          image.resizable()
+        } placeholder: {
+          ProgressView()
+        }
+        .frame(width: 250, height: 250)
       }
       .onAppear {
-        Api().getPosts { (posts) in
-          self.posts = posts
+        Api().getPokemon(name: "squirtle") { (pokemons) in
+          self.pokemons = pokemons
         }
       }
     }

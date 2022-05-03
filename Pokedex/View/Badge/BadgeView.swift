@@ -35,7 +35,7 @@ struct BadgeView_Previews: PreviewProvider {
   static var previews: some View {
     Group {
       BadgeView(
-        type: .water
+        type: .dragon
       )
       .padding()
       .previewLayout(.sizeThatFits)

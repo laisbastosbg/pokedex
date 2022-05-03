@@ -144,7 +144,7 @@ struct Result: Codable, Identifiable {
   var url: String
 }
 
-struct Pokemons: Codable, Identifiable {
+struct PokemonList: Codable, Identifiable {
   let id = UUID()
   var count: Int
   var results: [Result]

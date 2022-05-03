@@ -7,28 +7,32 @@
 
 import SwiftUI
 
+
+
 struct ContentView: View {
-  @State var pokemons: [Pokemon] = []
-  @State var allPokemons: [Pokemons] = []
+@State var pokemons: [Pokemon] = []
+  @State var pokemonList: [PokemonList] = []
   @State var results: [Result] = []
   
   var body: some View {
     VStack {
-      List(pokemons) { pokemon in
-        Text(pokemon.name)
-        let string = pokemon.sprites.other.official_artwork.front_default
-        AsyncImage(url: URL(string: string)) { image in
-          image.resizable()
-        } placeholder: {
-          ProgressView()
-        }
-        .frame(width: 250, height: 250)
+      List(results) { result in
+
+        Text(result.name)
       }
       .onAppear {
-        Api().getPokemon(name: "squirtle") { (pokemons) in
-          self.pokemons = pokemons
+        Task {
+          do {
+          let response = try await Api().asyncGetPokemonList()
+           self.pokemonList = response
+            self.results = response[0].results
+          } catch {
+            print("Request failed with error: \(error)")
+          }
         }
       }
+      
+      
     }
   }
 }

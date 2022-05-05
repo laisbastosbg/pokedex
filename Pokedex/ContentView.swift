@@ -10,29 +10,27 @@ import SwiftUI
 
 
 struct ContentView: View {
-@State var pokemons: [Pokemon] = []
+  @State var pokemons: [Pokemon] = []
   @State var pokemonList: [PokemonList] = []
   @State var results: [Result] = []
   
   var body: some View {
     VStack {
       List(results) { result in
-
-        Text(result.name)
+        
+        Text(result.name).foregroundColor(Color(UIColor(named: "poison")!))
       }
       .onAppear {
         Task {
           do {
-          let response = try await Api().asyncGetPokemonList()
-           self.pokemonList = response
+            let response = try await Api().asyncGetPokemonList()
+            self.pokemonList = response
             self.results = response[0].results
           } catch {
             print("Request failed with error: \(error)")
           }
         }
       }
-      
-      
     }
   }
 }

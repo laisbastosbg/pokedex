@@ -118,23 +118,22 @@ struct TypeItem: Codable {
 }
 
 struct Pokemon: Codable, Identifiable {
-  let id = UUID()
+  let id: Int
   var name: String
-//  var abilities: [AbilityItem]
-//  var base_experience: Int
-//  var forms: [Form]
-//  var height: Float
-//  var is_default: Bool
-//  var location_area_encounters: String
-//  var moves: [MoveItem]
-//  var name: String
-//  var order: Int
-////  var past_types
-//  var species: Species
+  var abilities: [AbilityItem]
+  var base_experience: Int
+  var forms: [Form]
+  var height: Float
+  var is_default: Bool
+  var location_area_encounters: String
+  var moves: [MoveItem]
+  var order: Int
+//  var past_types
+  var species: Species
   var sprites: Sprite
-//  var stats: [StatItem]
-//  var types: [TypeItem]
-//  var weight: Int
+  var stats: [StatItem]
+  var types: [TypeItem]
+  var weight: Int
 }
 
 

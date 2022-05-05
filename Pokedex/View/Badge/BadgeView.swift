@@ -13,16 +13,17 @@ struct BadgeView: View {
   
   var body: some View {
     HStack(
-      spacing: 10
+      spacing: 5
     ) {
       Image(type.icon)
         .resizable()
         .renderingMode(.template)
         .foregroundColor(.white)
         .scaledToFit()
-        .frame(width: 15, height: 15)
+        .frame(width: 10, height: 10)
       Text(type.label)
         .foregroundColor(.white)
+        .font(.caption)
     }
     .padding(5)
     .background(type.color)
@@ -35,7 +36,7 @@ struct BadgeView_Previews: PreviewProvider {
   static var previews: some View {
     Group {
       BadgeView(
-        type: .dragon
+        type: .fairy
       )
       .padding()
       .previewLayout(.sizeThatFits)

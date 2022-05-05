@@ -106,41 +106,41 @@ enum BadgeType {
   var color: Color {
     switch self {
     case .bug:
-      return Color(red: 140/255, green: 178/255, blue: 48/255)
+      return Color(UIColor(named: "bug")!)
     case .dark:
-      return Color(red: 88/255, green: 87/255, blue: 95/255)
+      return Color(UIColor(named: "dark")!)
     case .dragon:
-      return Color(red: 15/255, green: 106/255, blue: 192/255)
+      return Color(UIColor(named: "dragon")!)
     case .electric:
-      return Color(red: 238/255, green: 213/255, blue: 53/255)
+      return Color(UIColor(named: "electric")!)
     case .fairy:
-      return Color(red: 237/255, green: 110/255, blue: 199/255)
+      return Color(UIColor(named: "fairy")!)
     case .fighting:
-      return Color(red: 208/255, green: 65/255, blue: 100/255)
+      return Color(UIColor(named: "fighting")!)
     case .fire:
-      return Color(red: 253/255, green: 125/255, blue: 36/255)
+      return Color(UIColor(named: "fire")!)
     case .flying:
-      return Color(red: 116/255, green: 143/255, blue: 201/255)
+      return Color(UIColor(named: "flying")!)
     case .ghost:
-      return Color(red: 85/255, green: 106/255, blue: 174/255)
+      return Color(UIColor(named: "ghost")!)
     case .grass:
-      return Color(red: 98/255, green: 185/255, blue: 87/255)
+      return Color(UIColor(named: "grass")!)
     case .ground:
-      return Color(red: 221/255, green: 119/255, blue: 72/255)
+      return Color(UIColor(named: "ground")!)
     case .ice:
-      return Color(red: 97/255, green: 206/255, blue: 192/255)
+      return Color(UIColor(named: "ice")!)
     case .normal:
-      return Color(red: 157/255, green: 160/255, blue: 170/255)
+      return Color(UIColor(named: "normal")!)
     case .poison:
-      return Color(red: 165/255, green: 82/255, blue: 204/255)
+      return Color(UIColor(named: "poison")!)
     case .psychic:
-      return Color(red: 234/255, green: 93/255, blue: 96/255)
+      return Color(UIColor(named: "psychic")!)
     case .rock:
-      return Color(red: 186/255, green: 171/255, blue: 130/255)
+      return Color(UIColor(named: "rock")!)
     case .steel:
-      return Color(red: 65/255, green: 125/255, blue: 154/255)
+      return Color(UIColor(named: "steel")!)
     case .water:
-      return Color(red: 74/255, green: 144/255, blue: 218/255)
+      return Color(UIColor(named: "water")!)
     }
   }
 }

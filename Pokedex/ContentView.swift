@@ -13,11 +13,13 @@ struct ContentView: View {
   @State var pokemons: [Pokemon] = []
   @State var pokemonList: [PokemonList] = []
   @State var results: [Result] = []
-  
+
+ 
   var body: some View {
+    
     VStack {
       List(results) { result in
-        
+
         Text(result.name).foregroundColor(Color(UIColor(named: "poison")!))
       }
       .onAppear {
